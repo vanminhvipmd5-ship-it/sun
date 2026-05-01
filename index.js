@@ -15,7 +15,7 @@ let apiResponseData = {
     Xuc_xac_3: null,
     Tong: null,
     Ket_qua: "",
-    id: "@cskh_huydaixu",
+    id: "@vanminh2603",
     server_time: new Date().toISOString()
 };
 
@@ -380,7 +380,7 @@ function connectWebSocket() {
                     Xuc_xac_3: d3,
                     Tong: total,
                     Ket_qua: result,
-                    id: "@cskh_huydaixu",
+                    id: "@vanminh2603",
                     server_time: new Date().toISOString(),
                     update_count: (apiResponseData.update_count || 0) + 1
                 };
@@ -436,7 +436,7 @@ app.get("/api/sunwin/history", (req, res) => {
     const last100 = patternHistory.slice(-100).reverse().map(item => ({
         Ket_qua: item.result, Phien: item.session, Tong: item.total,
         Xuc_xac_1: item.dice[0], Xuc_xac_2: item.dice[1], Xuc_xac_3: item.dice[2],
-        id: "@cskh_huydaixu"
+        id: "@vanminh2603"
     }));
     res.json(last100);
 });
@@ -472,7 +472,7 @@ app.get("/api/predict", (req, res) => {
         Pattern: pattern9,
         Du_doan: prediction,
         Do_tin_cay: confidence+"%",
-        id: "@cskh_huydaixu",
+        id: "@vanminh2603",
         AIHDXSUNWIN: `HDXAISUNWIN_${prediction}_${confidence}`,
         method_details: {
             markov: details.markov ? `${details.markov.prediction} (${details.markov.confidence}%)` : null,
